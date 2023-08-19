@@ -35,7 +35,7 @@ local Success, Response = pcall(function()
 end)
 
 if not Success then
-	warn("\nOrion Library - Failed to load Feather Icons. Error code: " .. Response .. "\n")
+	warn("\YASSER - Failed to load Feather Icons. Error code: " .. Response .. "\n")
 end	
 
 local function GetIcon(IconName)
@@ -225,7 +225,7 @@ local function LoadCfg(Config)
 				end    
 			end)
 		else
-			warn("Orion Library Config Loader - Could not find ", a ,b)
+			warn("سكربت عربي Config Loader - تعذر العثور عليه  ", a ,b)
 		end
 	end)
 end
@@ -455,7 +455,7 @@ function OrionLib:Init()
 			if isfile(OrionLib.Folder .. "/" .. game.GameId .. ".txt") then
 				LoadCfg(readfile(OrionLib.Folder .. "/" .. game.GameId .. ".txt"))
 				OrionLib:MakeNotification({
-					Name = "Configuration",
+					Name = "إعدادات ",
 					Content = "Auto-loaded configuration for the game " .. game.GameId .. ".",
 					Time = 5
 				})
@@ -478,11 +478,11 @@ function OrionLib:MakeWindow(WindowConfig)
 	if WindowConfig.IntroEnabled == nil then
 		WindowConfig.IntroEnabled = true
 	end
-	WindowConfig.IntroText = WindowConfig.IntroText or "Orion Library"
+	WindowConfig.IntroText = WindowConfig.IntroText or "سكربت عربي"
 	WindowConfig.CloseCallback = WindowConfig.CloseCallback or function() end
 	WindowConfig.ShowIcon = WindowConfig.ShowIcon or false
 	WindowConfig.Icon = WindowConfig.Icon or "rbxassetid://8834748103"
-	WindowConfig.IntroIcon = WindowConfig.IntroIcon or "rbxassetid://8834748103"
+	WindowConfig.IntroIcon = WindowConfig.IntroIcon or "rbxassetid://4483362458"
 	OrionLib.Folder = WindowConfig.ConfigFolder
 	OrionLib.SaveCfg = WindowConfig.SaveConfig
 
